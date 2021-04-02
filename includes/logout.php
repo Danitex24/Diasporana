@@ -1,0 +1,10 @@
+<?php
+include('./includes/connection.php');
+include('./includes/session.php');
+session_start();
+session_destroy();
+session_unset();
+header('location:../login.php');
+ob_flush();
+mysqli_close($conn);
+?>
